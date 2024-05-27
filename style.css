@@ -1,0 +1,540 @@
+/*
+**
+En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM.
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el desarrollo web.
+La idea detrás de esto es dividir la interfaz de usuario en bloques independientes.
+Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/
+**
+*/
+
+main {
+  width: 100%;
+  padding: 0 1rem;
+  padding-top: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1136px;
+}
+
+/* Section Menu */
+section#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section#menu header.menu__header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-wrap: nowrap;
+  gap: 0.2rem;
+}
+
+section#menu header.menu__header h3.menu__title {
+  font-weight: 700;
+}
+
+section#menu header.menu__header h3.menu__title span {
+  display: none;
+}
+
+section#menu nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+section#menu nav ul.menu__list {
+  display: flex;
+  text-wrap: nowrap;
+  gap: 1rem;
+}
+
+section#menu nav ul.menu__list li:nth-child(1),
+section#menu nav ul.menu__list li:nth-child(2),
+section#menu nav ul.menu__list li:nth-child(3),
+section#menu nav ul.menu__list li:nth-child(4),
+section#menu nav ul.menu__list li:nth-child(5) {
+  display: none;
+}
+
+/* Section Title */
+section#title {
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+section#title div.title__div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section#title div.title__div img.title__profile {
+  height: auto;
+  width: 10rem;
+  align-self: center;
+}
+
+section#title div.title__div div.title__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+section#title div.title__div div.title__container h2.title__bio {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+section#title div.title__div div.title__container h3.title__subsection {
+  font-size: 0.9rem;
+}
+
+section#title div.title__div div.title__container ul.title__network {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+/* Section About */
+section#about {
+  display: flex;
+  margin: 1.5rem 0;
+}
+
+section#about div.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+section#about div.about__container h2.about__title {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+section#about div.about__container img {
+  height: auto;
+  width: 12rem;
+  align-self: flex-start;
+}
+
+/* Section Skills */
+section#skills {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+section#skills h2.skills__title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+section#skills div.skills__line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#skills div.skills__line div.skills__box {
+  flex-basis: 50%;
+  padding: 1rem;
+}
+
+section#skills div.skills__line div.skills__box ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section#skills div.skills__line div.skills__box ul li.skills__img {
+  height: 2rem;
+}
+
+section#skills div.skills__line div.skills__box ul li.skills__name {
+  margin-top: 5px;
+  font-weight: 900;
+}
+
+/* Section Hobbies */
+section#hobbies {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+section#hobbies h2.hobbies__title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+section#hobbies div.hobbies__line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section#hobbies div.hobbies__line div.hobbies__box {
+  flex-basis: 50%;
+  padding: 1rem;
+}
+
+section#hobbies div.hobbies__line div.hobbies__box ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section#hobbies div.hobbies__line div.hobbies__box ul li.hobbies__img {
+  height: 2rem;
+}
+
+section#hobbies div.hobbies__line div.hobbies__box ul li.hobbies__name {
+  margin-top: 5px;
+  font-weight: 900;
+}
+
+/* Section Academic */
+section#academic {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+section#academic h2.academic__title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+section#academic div.academic__courses {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+section#academic div.academic__courses div.academic__courses__box {
+  padding: 1rem;
+}
+
+section#academic div.academic__courses div.academic__courses__box ul.academic__courses__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section#academic div.academic__courses div.academic__courses__box ul.academic__courses__list li.academic__courses__item__img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+section#academic div.academic__courses div.academic__courses__box ul.academic__courses__list li.academic__courses__item__title {
+  margin-top: 5px;
+  font-weight: 900;
+}
+
+section#academic div.academic__courses div.academic__courses__box ul.academic__courses__list li.academic__courses__item__subtitle {
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+/* Section experience */
+section#experience {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+section#experience h2.experience__section__title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  align-self: center;
+  margin: 1rem 0
+}
+
+section#experience div.experiencie__box {
+  display: flex;
+  flex-direction: column;
+}
+
+section#experience div.experiencie__box div.experience__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+section#experience div.experiencie__box div.experience__info h2.experience__title {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+section#experience div.experiencie__box div.experience__info h3.experience__text {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+section#experience div.experiencie__box div.experience__info div.experience__description {
+  display: flex;
+  gap: 0.5rem;
+}
+
+section#experience div.experiencie__box div.experience__info div.experience__description a.repo {
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  border: 1px solid var(--color-link);
+  color: var(--color-link);
+}
+
+section#experience div.experiencie__box div.experience__info div.experience__description a.demo {
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  border: 1px solid var(--color-link);
+  color: var(--color-fondo);
+  background-color: var(--color-link);
+}
+
+/* Section Contact */
+section#contact {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+section#contact div.formcontato__contacto {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+section#contact div.formcontato__contacto div.formcontato--esquerda {
+  display: none;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text h2.formcontato__title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text h3.formcontato__subtext {
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container input.formcontato__input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border: none;
+  border-bottom: 3px solid #aaa;
+  border-radius: 5px;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container input.formcontato__input:focus {
+  border-bottom-color: var(--color-link);
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container input.formcontato__input::placeholder {
+  color: transparent;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container label.input-label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 18px;
+  transition: top 0.3s ease, font-size 0.3s ease;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container input.formcontato__input:focus+label.input-label,
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container input.formcontato__input:valid+label.input-label {
+  top: 0;
+  font-size: 12px;
+  color: var(--color-link);
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container textarea.formcontato__textarea {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  border: none;
+  border-bottom: 3px solid #aaa;
+  border-radius: 5px;
+  outline: none;
+  transition: border-bottom-color 0.3s ease;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container textarea.formcontato__textarea:focus {
+  border-bottom-color: var(--color-link);
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container textarea.formcontato__textarea::placeholder {
+  color: transparent;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container textarea.formcontato__textarea:focus+label.input-label,
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form div.input-container textarea.formcontato__textarea:valid+label.input-label {
+  top: 0;
+  font-size: 12px;
+  color: var(--color-link);
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form button.formcontato__botao:disabled {
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  border: 1px solid var(--color-link);
+  color: var(--color-link);
+  cursor: not-allowed;
+}
+
+section#contact div.formcontato__contacto div.formcontato__text form.formcontato__form button.formcontato__botao:not(:disabled) {
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+  border: 1px solid var(--color-link);
+  color: var(--color-fondo);
+  background-color: var(--color-link);
+}
+
+/*footeer*/
+section#footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 3rem;
+  background-color: #fff;
+}
+
+section#footer div.footer__rodape p {
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  section#menu header.menu__header h3.menu__title span {
+    display: inline-block;
+  }
+
+  section#menu nav ul.menu__list li:nth-child(6) {
+    font-weight: 900;
+  }
+
+  section#title div.title__div {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  section#skills div.skills__line div.skills__box {
+    flex-basis: 33%;
+  }
+
+  section#hobbies div.hobbies__line div.hobbies__box {
+    flex-basis: 33%;
+  }
+
+  section#academic div.academic__courses {
+    flex-flow: row wrap;
+  }
+}
+
+/* Mobile */
+@media (min-width: 960px) {
+
+  section#menu nav ul.menu__list li:nth-child(1),
+  section#menu nav ul.menu__list li:nth-child(2),
+  section#menu nav ul.menu__list li:nth-child(3),
+  section#menu nav ul.menu__list li:nth-child(4),
+  section#menu nav ul.menu__list li:nth-child(5) {
+    display: block;
+  }
+
+  section#title div.title__div img.title__profile {
+    width: 30rem;
+  }
+
+  section#title div.title__div div.title__container h2.title__bio {
+    font-size: 2.5rem;
+  }
+
+  section#title div.title__div div.title__container h3.title__subsection {
+    font-size: 1.2rem;
+  }
+
+  section#title div.title__div div.title__container ul.title__network {
+    font-size: 1.2rem;
+  }
+
+  section#about div.about__container h2.about__title {
+    font-size: 2.5rem;
+  }
+
+  section#about div.about__container p.about__paragraph {
+    font-size: 1.2rem;
+  }
+
+  section#skills h2.skills__title {
+    font-size: 2.5rem;
+  }
+
+  section#skills div.skills__line {
+    flex-wrap: nowrap;
+  }
+
+  section#hobbies div.hobbies__line {
+    flex-wrap: nowrap;
+  }
+
+  section#experience div.experiencie__box {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  section#experience div.experiencie__box img {
+    width: 60%;
+  }
+
+  section#contact div.formcontato__contacto div.formcontato--esquerda {
+    display: block;
+    flex: 1;
+  }
+
+  section#contact div.formcontato__contacto div.formcontato--esquerda img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
